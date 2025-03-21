@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+*.venv/
+
+# Conda environment files
+conda-meta/
+*.conda
+*.yaml
+*.yml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache and logs
+*.log
+*.out
+*.err
+*.bak
+*.swp
+*.swo
+*.swn
+logs/
+cache/
+
+# PyTorch model checkpoints
+*.pt
+*.pth
+checkpoints/
+models/
+
+# Data files
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.pickle
+*.h5
+*.npy
+*.npz
+datasets/
+data/
+
+# Large files
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.iml

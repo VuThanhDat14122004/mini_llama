@@ -1,0 +1,15 @@
+# Conda dependencies (install separately if using pip)
+pytorch
+torchvision
+torchaudio
+# pytorch-cuda  # Requires conda, not installable via pip
+
+# Pip dependencies
+tqdm
+requests
+importlib-metadata
+filelock
+scikit-learn
+numpy
+tokenizers
+sentencepiece
