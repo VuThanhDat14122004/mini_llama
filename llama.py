@@ -30,6 +30,8 @@ class RMSNorm(torch.nn.Module):
         self.eps = eps
         self.weight = nn.Parameter(torch.ones(dim))
 
+        
+
     def _norm(self, x):
         """
         Compute the root mean square normalization. Use Equation 4 under
@@ -97,6 +99,7 @@ class Attention(nn.Module):
         attention matrix before applying it to the value tensor.
         '''
         # todo
+
         '''
         shape of query: batchsize x n_local_head x seqlen x  head_dim
         shape of key, value: batchsize x n_local_kv_head x seqlen  x head_dim
