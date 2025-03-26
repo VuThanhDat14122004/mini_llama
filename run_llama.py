@@ -254,6 +254,7 @@ def test_with_prompting(args):
 		else:
 			label_name_str = ", ".join(label_names[:-1]) + ", or " + label_names[-1]
 		prompt_suffix=f"Is this movie {label_name_str}? This movie is "
+		
 		model = LlamaZeroShotClassifier(config, tokenizer, label_names)
 		model = model.to(device)
 
@@ -276,7 +277,8 @@ def test(args):
 	assert args.test_out.endswith("test-finetuning-output.txt"), 'For saving finetuning results, please set the test_out argument as "<dataset>-test-finetuning-output.txt"'
 	with torch.no_grad():
 		device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
-		saved = torch.load(args.filepath)
+		# saved = torch.load(args.filepath)
+		saved = torch.load(args.filepath, weights_only=False)
 		config = saved['model_config']
 		model = LlamaEmbeddingClassifier(config)
 		model.load_state_dict(saved['model'])
